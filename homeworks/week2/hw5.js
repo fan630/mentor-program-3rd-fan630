@@ -1,9 +1,11 @@
-function join (str, concatStr) {
+function join (arr, concatStr) {
   let result = ''
-  for (let i = 0; i < str.length; i++) {
-    result += str[i] + `${concatStr}`
+  let result2 = ''
+  for (let i = 1; i < arr.length; i++) {
+    result += `${concatStr}` + arr[i]
+    result2 = arr[0] + result
   }
-  return result
+  return result2
 }
 
 function repeat (str, times) {
@@ -16,4 +18,6 @@ function repeat (str, times) {
 }
 
 console.log(join('a', '!'))
+console.log(join(['a', 'b', 'c'], '!'))
+console.log(join(['a', 1, 'b', 2, 'c', 3], ','))
 console.log(repeat('a', 5))
