@@ -18,10 +18,10 @@ Base URL: https://api.fan630-DiningHall.com
 | 說明            | Method    | path     | 參數     |  範例                    |
 | -------------- | --------  | -------- | -------- | ------------------------| 
 | 回傳所有餐廳資料  | Get       | /dhs     | _limit: 限制回傳資料數量 | /dhs_limit=5|
-| 回傳單一餐廳資料  | Get       | /dhs:id  |    無        | /dhs/10 |
+| 回傳單一餐廳資料  | Get       | /dhs/:id  |    無        | /dhs/10 |
 | 新增餐廳         | Post      | /dhs      |  name:餐廳名 |  無 |
-| 刪除餐廳         | Delete    | /dhs:id   |  無          |  無 |
-| 更改餐廳         | Patch     | /dhs:id   |  name:餐廳名   | 無 |
+| 刪除餐廳         | Delete    | /dhs/:id   |  無          |  無 |
+| 更改餐廳         | Patch     | /dhs/:id   |  name:餐廳名   | 無 |
 
   # 開始使用
   - ### 建立Client ID 及 Client Secret
