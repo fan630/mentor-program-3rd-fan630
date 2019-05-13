@@ -2,65 +2,65 @@ const request = require('request')
 const process = require('process')
 
 // 印出前二十本書的 id 與書名
-const api = 'https://lidemy-book-store.herokuapp.com/books?_limit=20'
-const list = (response, body) => {
-  if (process.argv[2] === 'list') {
+if (process.argv[2] === 'list') {
+  request('https://lidemy-book-store.herokuapp.com/books?_limit=20', (_error, response, body) => {
     const json = JSON.parse(body)
-    for (let i = 0; i < 20; i += 1) {
+    for (let i = 0; i < json.length; i += 1) {
       console.log(`${json[i].id} ${json[i].name}`)
     }
-  }
-}
-
-request(api, list)
-
+  })
+};
 // 輸出指定id的書籍
-const api2 = `https://lidemy-book-store.herokuapp.com/books/${process.argv[3]}`
-const read = (response, body) => {
-  if (process.argv[2] === 'read') {
+if (process.argv[2] === 'read') {
+  request(`https://lidemy-book-store.herokuapp.com/books/${process.argv[3]}`, (_error, response, body) => {
     const json = JSON.parse(body)
     console.log(json.name)
-  }
+  })
 }
-request(api2, read)
 
 // 刪除指定id的書籍
-request.delete(`https://lidemy-book-store.herokuapp.com/books/${process.argv[3]}`,
-  (response, body) => {
-    if (process.argv[2] === 'delete') {
-      const json = JSON.parse(body)
-      console.log(json.name)
+if (process.argv[2] === 'delete') {
+  request.delete(`https://lidemy-book-store.herokuapp.com/books/${process.argv[3]}`, (_error, response) => {
+    // eslint-disable-next-line no-constant-condition
+    if (response.statusCode === 200) {
+      console.log('刪除成功')
+    } else {
+      console.log('失敗')
     }
   })
-
+}
 // 新增一本名為 I love coding 的書
-request.post(
-  {
-    url: 'https://lidemy-book-store.herokuapp.com/books',
-    form: {
-      name: process.argv[3]
-    }
-  },
-  (response, body) => {
-    if (process.argv[2] === 'create') {
-      const json = JSON.parse(body)
-      console.log(json)
-    }
-  }
-)
 
+if (process.argv[2] === 'create') {
+  request.post(
+    {
+      url: 'https://lidemy-book-store.herokuapp.com/books',
+      form: {
+        name: process.argv[3]
+      }
+    },
+    (_error, response, body) => {
+      if (response.statusCode === 201) {
+        console.log('新增成功')
+      }
+    }
+  )
+}
 // 更新指定 id 的書名為 new name
-request.patch(
-  {
-    url: `https://lidemy-book-store.herokuapp.com/books'/${process.argv[3]}`,
-    form: {
-      name: process.argv[4]
+if (process.argv[2] === 'update') {
+  request.patch(
+    {
+      url: `https://lidemy-book-store.herokuapp.com/books${process.argv[3]}`,
+      form: {
+        name: process.argv[4]
+      }
+    },
+    (_error, response) => {
+      if (response.statusCode === 200) {
+        console.log('新增成功')
+      } else {
+        console.log('新增失敗')
+      }
     }
-  },
-  (response, body) => {
-    if (process.argv[2] === 'update') {
-      const json = JSON.parse(body)
-      console.log(json)
-    }
-  }
-)
+  )
+}
