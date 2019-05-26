@@ -1,0 +1,169 @@
+/* 全域設定 */
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.container {
+    max-width:1000px;
+    margin: 0 auto;
+}
+
+ul{
+    margin: 0;
+}
+
+li{
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5{
+    margin: 0;
+}
+
+.col-3{
+    width: 30%;
+    float: left;
+    margin-right:2px;
+}
+
+/* head */
+#nav {
+    width: 100%;
+    position:fixed;
+    background-color: #1F2835;
+    color: white;
+}
+
+.title {
+    font-size: 20px;
+    list-style-type: none;
+    display: inline-block;
+    margin:12px;
+}
+
+.title:hover{
+    color: white;
+}
+
+ul {
+    display: inline-block;
+    padding: 12px;
+}
+
+li {
+    display: inline;
+    list-style-type: none;
+    margin: 0 3px;
+}
+
+a {
+    color:#A3A5A7;
+    text-decoration: none;
+}
+
+li > a:hover {
+    color:white;
+}
+
+/* head-ended */
+
+/* intro started */
+.intro {
+    background: #E9FAFF;
+    text-align: left;
+    padding-top:40px;
+}
+
+.intro > .container {
+    padding: 40px;
+}
+
+.subtitle{
+    font-size: 72px;
+    font-weight: normal;
+}
+
+p {
+    line-height: 1.5em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    text-align: center;
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #207EF2;
+    border-radius: 6px;
+    font-size: 19px;
+    font-weight:bold;
+    color:white;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background: rgba(13,49,95,0.7)
+}
+/* body-ended */
+
+/* <!-- heading-started --> */
+
+@media (max-width:750px) {
+    .container{
+        max-width: 600px;
+    }
+    .col-3 {
+        width:100%;
+    }
+}
+
+.heading {
+    padding: 30px;
+}
+.col-3 > .subtitle {
+    font-size: 35px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.content {
+    line-height: 1.5em;
+}
+
+.btn-grey{
+    margin: 20px 0;
+    text-align: center;
+    display: inline-block;
+    padding: 13px 20px;
+    background-color: #939393;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight:bold;
+    color:white;
+    transition: all 0.3s ease;
+}
+
+.btn-grey:hover{
+    background: rgba(147,147,147,0.7)
+}
+
+/* <!-- footer-started --> */
+
+#section {
+    margin-top:25px;
+}
+
+#section > .container {
+    border-top:1px solid#E3E3E3;
+}
+
+#section > .container > span {
+    display:block;
+    letter-spacing: 1px;
+    font-size: 15px;
+    padding-top:20px;
+    padding-bottom: 50px;
+}
