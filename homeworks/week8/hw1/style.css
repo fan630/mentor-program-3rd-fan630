@@ -1,0 +1,17 @@
+.blue{
+    background-color:#00bfff;
+}
+.black{
+    background-color: black;
+}
+.white{
+    color:white
+}
+
+.award {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 30px;
+    text-align: center;
+}
