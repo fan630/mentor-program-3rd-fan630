@@ -31,8 +31,6 @@ btn.addEventListener('click', function () {
     newRequest.send(data)
     comments.value = ''
     posts.innerHTML = ''
-    newRequest.open('POST', 'https://lidemy-book-store.herokuapp.com/posts', true)
-    newRequest.send()
   } else {
     alert('請輸入留言內容')
   }
