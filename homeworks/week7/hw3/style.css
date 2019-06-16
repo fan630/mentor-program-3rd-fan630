@@ -1,0 +1,95 @@
+.container {
+    margin: 0 auto;
+    width: 400px;
+}
+
+.plus2{
+    background-color: blue;
+}
+
+.special2 {
+    background-color: white;
+}
+
+.active{
+    background:grey;
+}
+
+.calc {
+    margin-top:100px;
+    border:1px solid;
+}
+
+.calc__top{
+    height: auto;
+}
+
+.calc__display{
+    border: 1px solid;
+    margin: 10px;
+    padding:15px;
+    box-sizing: border-box;
+    text-align: right;
+    font-size: 14px;
+}
+
+.calc__body{
+    height:auto;
+}
+
+.calc__buttom{
+    border: 1px solid;
+    margin: 10px;
+    padding: 10px;
+}
+.top {  
+    display: flex;
+    justify-content: space-between;
+}
+.top > div {
+    width:40px;
+    height:20px;
+    line-height: 20px;
+    padding: 10px 20px;
+    border: 1px solid;
+    text-align: center;
+}   
+
+.number {  
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.number > div {
+    width:40px;
+    height:20px;
+    line-height: 20px;
+    margin-top:10px;
+    padding: 10px 20px;
+    border: 1px solid;
+    text-align: center;
+    cursor: pointer;
+}   
+
+.bottom {  
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.bottom > div {
+    width:40px;
+    height:20px;
+    line-height: 20px;
+    margin-top:10px;
+    padding: 10px 20px;
+    border: 1px solid;
+    text-align: center;
+    cursor: pointer;
+}   
+
+#equal {
+    flex-grow:0.83;
+    background-color: orange;
+}
+

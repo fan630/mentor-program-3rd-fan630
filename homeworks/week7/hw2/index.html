@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./index_hw2.css">
+    <title>HW2</title>
+</head>
+<body>
+    <form>
+        <div class="slider">  
+            </div>
+        <div class="container">
+            <div class="form">
+                <div class="form__header">
+                        <h2>從零到一：程式導師實驗計畫報名表單</h2>
+        
+                        <div>詳情請參考:
+                            <a href="">https://medium.com/@hulitw/mentor-program-b5f96ae1eed1</a>
+                            <br>
+                            記得填完表單之後還要寫信報名才算成功，兩者缺一不可！
+                        </div>
+                        <br>
+                        <div class="must">*必填</div>
+                    </div>
+        
+                    <div class="form__body">
+        
+                        <div class="form__content form__email">
+                        <div class="form__input">
+                            電子郵件地址
+                            <span class="star">*</span>
+                        </div>
+                            <input type="text" id="email" placeholder="請輸入電子郵件"/>
+                            <div class="reminder1">這是必填的欄位</div>
+                        </div>
+        
+                        <div class="form__content form__nickName">
+                            <label for="nickName">
+                                暱稱<span class="star">*</span>
+                                <div class="subtitle">該怎麼稱呼你</div>
+                            </label>
+                            <input type="text" id="nickName" placeholder="你的回答"/>
+                            <div class="reminder2">這是必填的欄位</div>
+                        </div>
+            
+                        <div class="form__content form__register">
+                            <div>報名類型
+                                <span class="star">*</span>
+                            </div>
+                            <label for="engineer">
+                                <input type="radio" name="class" class="type1 form__registerOption1"> 工程師培養班（每週付出四十小時，從零培養到工程師，學費是一個月薪水)
+                            </label>
+                            <br>
+                            <label for="others">
+                                    <input type="radio" name="class" class="type2 form__registerOption2"> 業餘班（依照個人目標訂立學習計畫，學費一萬五千元）<br />
+                            </label>
+                            <div class="reminder3">這是必填的欄位</div>
+                        </div>
+                        
+                        <div class="form__content form__coding">
+                            <label for="coding">是否有程式相關背景？
+                                <span class="star">*</span>
+                                <br/>
+                                <div class="subtitle">
+                                        範例：無、高中時候學過C++、學過一點網頁前端、目前在資策會上課...
+                                </div>
+                            </label> 
+                            <input type="text" id="coding" placeholder="你的回答"/>
+                            <div class="reminder4">這是必填的欄位</div>
+                        </div>
+            
+                        <div class="form__content form__others">
+                            <label for="others">其他
+                                <br/>
+                                <div class="subtitle">其他任何你想講的</div>
+                            </label> 
+                            <input type="text" id="others" placeholder="你的回答"/>
+                        </div>                
+                        
+                    </div>
+        
+                    <div class="form__footer">
+                        <button type='button' class="btn">提交</button>
+                    </div>
+            </div>
+
+
+        </div>
+
+    </form>
+    <script src="./hw2.js"></script>
+</body>
+</html>
