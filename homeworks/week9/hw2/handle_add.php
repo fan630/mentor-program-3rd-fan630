@@ -4,7 +4,7 @@
     $content = $_POST['content'];
     $username = $_COOKIE['username'];
 
-    $sql = "INSERT INTO comments(username,content) VALUES ('$username','$content')";
+    $sql = "INSERT INTO fan630_comments(username,content) VALUES ('$username','$content')";
 
     $result= $conn->query($sql);
 

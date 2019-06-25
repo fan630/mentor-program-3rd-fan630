@@ -1,6 +1,6 @@
 <?php
     require_once('./conn.php');
-    $sql = "SELECT c.content, c.created_at, c.id ,u.nickname FROM comments as c JOIN users as u ON c.username = u.username ORDER BY created_at DESC";
+    $sql = "SELECT c.content, c.created_at, c.id ,u.nickname FROM fan630_comments as c JOIN fan630_users as u ON c.username = u.username ORDER BY created_at DESC";
     $result= $conn->query($sql);
     if (!$result) {
         trigger_error('Invalid query: ' . $conn->error);
