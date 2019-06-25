@@ -38,7 +38,7 @@
                         echo "<div class='container'>";
                         echo   "<div class='msgboard__display__top'>";
                         echo       "<div class='nickname'>暱稱:$row[nickname]</div>";
-                        echo      "<div><textarea name='content' id='' cols='123' rows='10' class='content'>$row[content]</textarea></div>";
+                        echo      "<div class='content'>$row[content]</div>";
                         echo       "<div class='created_at'>$row[created_at]</div>";
                         echo    "</div>";
                         echo   "<div class='msgboard__display__bottom'>";

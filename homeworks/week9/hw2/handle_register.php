@@ -14,6 +14,7 @@
         $password = $_POST['password'];
         $nickname = $_POST['nickname'];
 
+
         $sql = "INSERT INTO fan630_users (username,password,nickname) VALUES ('$username','$password','$nickname')";
         $result = $conn->query($sql);
         
