@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="./hw2.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>HW2</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="title">
+                To Do List
+                <span class=".bar"></span>
+            </div>
+
+            <div class="section">
+                <input type="text" placeholder="請輸入待辦事項" class="text" value="" />
+                <button type="button" class="btn btn-outline-primary" data-toggle="button">提交</button>
+            </div>
+            <ul class="list"></ul>
+        </div>
+    </div>
+
+
+    <script>
+        function add() {
+            if ($('.text').val() === '') {
+                alert('請先輸入待辦事項!!')
+            } else {
+                text = $('.text').val()
+                $('.list').append(
+                    `<li>
+                        <input type='checkbox' class='done'>
+                            ${text} 
+                            <button class='delete'>
+                                Delete
+                            </button>
+                    </li>`)
+                $('.text').val('')
+            }
+        }
+
+        function deleteItem() {
+            $(this).parent().remove()
+        }
+
+        function finished() {
+            $(this).parent().toggleClass('lineThrough')
+        }
+
+        $(document).ready(() => {
+            $("span[class$='.bar']").addClass('fas fa-list alt')
+            $('.btn').on('click', add)
+            $(document).on('click', '.delete', deleteItem)
+            $(document).on('click', '.done', finished)
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>
