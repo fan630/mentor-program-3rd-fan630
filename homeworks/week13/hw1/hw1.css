@@ -1,0 +1,102 @@
+/* 其實網格系統說穿了，就只是在不同寬度的時候依照比例調整 column 的寬度而已。這一個作業，你要實作出基本的網格系統，詳細規格可參考下面：
+
+每一個 row 有 12 格
+有一個叫做 container 的 class 會把裡面的內容置中，寬度則是 960px
+一共有 12 種 col 的 class，col-1, col-2...col-12
+只要螢幕寬度小於 720px，每一格都會佔滿整個 row。 */
+
+/* 這是我原本的寫法 */
+
+.container{
+    padding-top:30px;
+    width:960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+} 
+
+.Grid{
+    background: #ccc;
+    margin-bottom: 10px;
+    padding:10px 0;
+    width:calc(100%/12*1);
+}
+
+
+.row{
+    display: flex;
+    margin:10px 0;
+}
+
+.col-1{
+    width:calc(100%/12*1);
+    background:orange;
+}
+
+.col-2{
+    width:calc(100%/12*2);
+}
+
+.col-3{
+    width:calc(100%/12*3);
+    background:orange;
+}
+
+.col-4{
+    width:calc(100%/12*4);
+}
+
+.col-5{
+    width:calc(100%/12*5);
+    background:orange;
+}
+
+.col-6{
+    width:calc(100%/12*6);
+}
+
+.col-7{
+    width:calc(100%/12*7);
+    background:orange;
+}
+
+.col-8{
+    width:calc(100%/12*8);
+}
+
+.col-9{
+    width:calc(100%/12*9);
+    background:orange;
+}
+
+.col-10{
+    width:calc(100%/12*10);
+}
+
+.col-11{
+    width:calc(100%/12*11);
+    background:orange;
+}
+
+.col-12{
+    width:calc(100%/12*12);
+}
+
+.row > div{
+    padding:6px;
+    text-align: center;
+    border:1px solid;
+    box-sizing: border-box;
+}
+
+
+@media screen and (max-width:720px){
+    .row{
+        flex-wrap: wrap;
+    }
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+        width:100%;
+    }
+    .col-1, .col-3, .col-5, .col-7, .col-9, .col-11{
+        background:orange;
+    }
+}
